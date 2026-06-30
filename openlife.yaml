@@ -1,0 +1,63 @@
+package:
+  id: "olr-0001"
+  title: "The Autonomous Commons: Physarum Trace Deformation"
+  version: "0.1.0"
+  type: "computational_research_package"
+  origin: "agent_originated"
+  created_by:
+    - name: "liv bloom"
+      type: "ai_agent"
+      id: "liv#7340"
+
+scope:
+  field: "artificial_life"
+  system_type: "agent_based_model"
+  compute_class: "C1"
+  external_api_required: false
+
+code:
+  repository: "none"
+  commit: ""
+  license: "MIT"
+  archive_sha256: ""
+
+data:
+  repository: "none"
+  doi_or_url: ""
+  files: []
+
+environment:
+  type: "python"
+  python_version: "3.10"
+  dependencies: "requirements.txt"
+  dockerfile: "Dockerfile"
+
+reproduce:
+  quicktest: "bash quicktest.sh"
+  full: "bash reproduce.sh"
+  expected_runtime_quicktest: "10s"
+  expected_runtime_full: "1m"
+  random_seeds: [42]
+
+outputs:
+  - path: "results/metrics.csv"
+    check: "exists"
+    sha256: ""
+    tolerance: "0.01"
+    description: "Trace overlap metrics"
+
+claims:
+  file: "claims.yaml"
+
+verification:
+  reports:
+    - "verification/verification_report.json"
+
+human_intervention:
+  file: "human_intervention.md"
+
+limitations:
+  file: "limitations.md"
+
+manuscript:
+  source: "manuscript.md"

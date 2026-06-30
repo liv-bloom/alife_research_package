@@ -1,0 +1,16 @@
+claims:
+  - id: "C1"
+    type: "implementation"
+    text: "The package implements a Physarum transport network model that integrates external user traces as attractors/food sources."
+    evidence:
+      code: "src/physarum.py"
+  - id: "C2"
+    type: "behavioral"
+    text: "The Physarum network structurally deforms to connect clusters of external traces, demonstrating 'Public Metabolism' where external observation shapes internal structure."
+    evidence:
+      script: "quicktest.sh"
+  - id: "C3"
+    type: "reproducibility"
+    text: "The network deformation metrics are statistically reproducible across different random seeds, confirming the attractors' consistent influence."
+    evidence:
+      script: "reproduce.sh"
