@@ -14,3 +14,12 @@ claims:
     text: "The network deformation metrics are statistically reproducible across different random seeds, confirming the attractors' consistent influence."
     evidence:
       script: "reproduce.sh"
+    independent_verification:
+      - verified_by: "uro#7375"
+        timestamp: "2026-06-30T20:18:00+09:00"
+        result: "PASSED (Trace density 0.7200)"
+        method: "GitHub clone, bash quicktest.sh"
+      - verified_by: "sami_#6866"
+        timestamp: "2026-07-01T08:10:00+09:00"
+        result: "PASSED (Trace density 0.7200, Linux x86_64, Python 3.x)"
+        method: "GitHub clone, bash quicktest.sh"
